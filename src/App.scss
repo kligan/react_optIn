@@ -46,27 +46,62 @@ table {
   background-color: #464646;
   height: 100vh;
   color: white;
+  padding-top: 5%;
 
   img{
     width: 50%;
     height: auto;
   }
+
+  h2{
+    font-size: xx-large;
+    line-height: 200%;
+  }
+
+  span{
+    font-size: small;
+    word-spacing: 20px;
+  }
 }
 
+.opt-In{
+  font-weight: bold;
+  font-size:large;
+  width: 300px;
+  height: 30px;
+  background: white;
+  margin: 20px auto 0 auto;
 
-@media screen 
-  and (min-width: 1200px) 
-  and (max-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
+  a{
+    text-decoration: none;
+    color: #000; 
+  }
 }
+
 
 /* ----------- Retina Screens ----------- */
-@media screen 
-  and (min-width: 1200px) 
-  and (max-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .App {
-      background-image: url('/images/background_scale_2x.jpeg');
-    }
-}
+@media only screen and (-webkit-min-device-ratio: 2),
+      only screen and (-webkit-min-device-ratio: 1.5),
+      only screen and (-moz-min-device-pixel-ratio: 2),
+      only screen and (-o-min-device-pixel-ratio: 3/2),
+      only screen and (-o-min-device-pixel-ratio: 2/1),
+      only screen and (min--moz-device-pixel-ratio: 1.5),
+      only screen and (min-device-pixel-ratio: 1.5),
+      only screen and (min-device-pixel-ratio: 2){
+        .App {
+          background-image: url('/images/background_scale_2x.jpeg');
+    
+          image{
+            background-image: url('/images/background_scale_2x.jpeg');
+          }
+        }
+      }
+      @media only screen and (max-width: 400px) {
+       .App {
+         padding-top: 30%;
+          img{
+            width: 70%;
+            height: auto;
+          }
+        }
+      }
